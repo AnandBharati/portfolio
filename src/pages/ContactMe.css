@@ -1,0 +1,65 @@
+.contactme {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactme h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.contactme :is(input[type='text'], textarea) {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border: 2px solid #3331;
+    transition: border .5s ease;
+    width: clamp( 200px , 90%, 600px);
+    color: #333;
+}
+
+.contactme :is(input[type='text'], textarea):focus{
+    border: 2px solid #1B90DD;
+}
+
+.contactme button{
+    border: none;
+    outline: none;
+    /* background-color: #1B90DD; */
+    border: 2px solid #3331;
+    padding: .5rem 2rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.contactme button:active{
+    outline: none;
+    scale: 1.05;
+}
+
+.contactme button::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1B90DD;
+    translate: calc(-100% - 2px);
+    transition: translate .2s ease;
+    z-index: -1;
+}
+
+.contactme button:hover::before{
+    translate: 0;
+}

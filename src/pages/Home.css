@@ -1,0 +1,115 @@
+.home {
+    /* background-color: #F4F4F6; */
+    color: #071013;
+    min-height: calc(100dvh - 4.5rem);
+    max-height: 100vh;
+    width: 100vw;
+    display: flex;
+    gap: 2rem;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.home img {
+    text-align: center;
+    height: clamp(12rem, 50vw, 20rem);
+    object-fit: cover;
+    border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+    animation: border-animation 10s ease-in-out infinite;
+    filter: grayscale(1) contrast(1.4);
+}
+
+.home h1 {
+    font-size: clamp(2rem, 40vw, 4rem);
+    text-align: center;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.home h2 {
+    font-size: clamp(1.75rem, 30vw, 3rem);
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.home h3 {
+    font-size: clamp(1.5rem, 25vw, 2.5rem);
+    font-weight: 500;
+}
+
+.home h4 {
+    font-size: clamp(1.25rem, 20vw, 1.5rem);
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    text-align: center;
+    font-style: italic;
+}
+
+@keyframes border-animation {
+
+    0%,
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+        box-shadow: 0 -2vmin 4vmin LightPink inset, 0 -4vmin 4vmin MediumPurple inset,
+            0 -2vmin 7vmin purple inset;
+    }
+
+    10% {
+        border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+    }
+
+    20% {
+        border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+    }
+
+    30% {
+        border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+        box-shadow: 0 -4vmin 8vmin hotpink inset, -1vmin -2vmin 6vmin LightPink inset,
+            -1vmin -2vmin 4vmin MediumPurple inset, 1vmin 4vmin 8vmin purple inset;
+    }
+
+    40% {
+        border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+    }
+
+    50% {
+        border-radius: 100%;
+        box-shadow: 0 4vmin 16vmin hotpink inset, 0 2vmin 5vmin LightPink inset, 0 4vmin 4vmin MediumPurple inset,
+            0 6vmin 8vmin purple inset;
+    }
+
+    60% {
+        border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+    }
+
+    70% {
+        border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+        box-shadow: 1vmin 1vmin 8vmin LightPink inset,
+            2vmin -1vmin 4vmin MediumPurple inset, -1vmin -1vmin 16vmin purple inset;
+    }
+
+    80% {
+        border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+    }
+
+    90% {
+        border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        padding: 2rem 0;
+    }
+}

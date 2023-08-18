@@ -1,0 +1,22 @@
+.gotoTop{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    background-color: #111;
+    padding: .5rem 1rem;
+    color: #ddd;
+
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity .3s ease;
+}
+
+.gotoTop:hover{
+    opacity: 1;
+}

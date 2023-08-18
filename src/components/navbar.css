@@ -1,0 +1,117 @@
+.navbar {
+    /* background-color: lime; */
+    /* background-color: #1B90DD; */
+    background-color: transparent;
+    width: 100vw;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 #071013aa;
+    position: relative;
+    z-index: 100;
+
+    scroll-snap-type: both mandatory;
+    scroll-snap-align: start;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #071013;
+}
+
+.menus svg {
+    display: none;
+}
+
+.sm-menus {
+    display: none;
+}
+
+.lg-menus {
+    display: flex;
+}
+
+
+.menus .lg-menus {
+    top: 4.5rem;
+    left: 0;
+    /* background-color: green; */
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.lg-menus li {
+    padding: .2rem .5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #071013;
+}
+
+.lg-menus li:hover {
+    border-bottom: 2px solid #0c4368;
+}
+
+.lg-menus li.active {
+    border-bottom: 2px solid #FF2E00;
+}
+
+@media only screen and (max-width: 786px) {
+    .menus svg {
+        display: inline-block;
+        font-size: 2rem;
+    }
+
+    .menus {
+        display: flex;
+        align-self: self-start;
+        /* justify-self: flex-end; */
+        flex-direction: column;
+        align-items: self-end;
+        gap: 2rem;
+    }
+
+    .menus .lg-menus {
+        display: none;
+    }
+
+    .menus .sm-menus {
+        background-color: #1B90DD;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        width: 100vw;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 10px 20px -10px #071013aa;
+        padding: 1rem 0;
+        animation: slide-down .5s ease-in-out forwards;
+        z-index: -1;
+    }
+
+    @keyframes slide-down {
+        0%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+
+    .menus ul li {
+        padding: .5rem 0;
+        position: relative;
+        color: black;
+    }
+
+
+
+}
